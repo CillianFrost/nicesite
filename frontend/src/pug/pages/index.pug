@@ -1,7 +1,25 @@
 include ../partials/head.pug
 body
-  include ../partials/header.pug
-  main.home_page
-    h1 hello
-  include ../partials/footer.pug
-  include ../partials/scripts.pug
+    include ../partials/header.pug
+    main.container-fluid.ml-5.mr-5
+        .h2.nice_title.w-100.mb-4 Charts
+        section.row.align-items-center.justify-content-around.mb-4
+            - var n = 20
+            while n < 24
+                .col-md-2
+                    .nice_charts 
+                        span= n++
+        .h2.nice_title.w-100.mb-4 Sales
+        table.table.table-striped
+            thead
+                tr
+                    each val, index in ['#', 'check', 'Product', 'Category', 'Price']
+                        th= val
+            tbody
+                each val in [1, 2, 3, 4, 5]
+                    tr= val
+                        each val, index in ['#', 'check', 'Product', 'Category', 'Price']
+                            td= val
+                    
+    include ../partials/footer.pug
+    include ../partials/scripts.pug
