@@ -1,0 +1,22 @@
+{
+  "name": "hyip_template",
+  "version": "1.1.0",
+  "main": "index.js",
+  "description": "For very fast making of HYIP",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sergey, Igor Sh., Igor Sm.",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
