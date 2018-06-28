@@ -1,6 +1,7 @@
 $light_color: #4e5d6c
 $dark_color: #2b3e50
 $text_color: #ebebeb
+$link_color: #df691a
     
 .bg-custom-light
     background-color: $light_color
@@ -17,7 +18,7 @@ $text_color: #ebebeb
     color: $text_color
     font-size: 1.5em
     border-radius: 50%
-    border: 10px $text_color solid
+    border: .4em $text_color solid
     width: 5em
     height: 5em
     box-sizing: border-box
@@ -35,3 +36,15 @@ $text_color: #ebebeb
 .nice_padding
     padding-left: 6em
     padding-right: 6em
+
+.nice_recommend_img
+    height: 400px
+    width: auto
+
+.nice_link
+    a
+        color: $link_color
+        text-decoration: none
+    &:hover
+        a
+            filter: brightness(150%)

@@ -6,27 +6,29 @@ body
         section.row.align-items-center.justify-content-around.mb-4
             - var n = 20
             while n < 24
-                .col-md-2
-                    .nice_charts 
+                .col-md-2.col-6.mb-4.chart_wrapper
+                    .nice_charts.mx-auto
                         span= n++
         .h2.nice_title.w-100.mb-4 Sales
-        table.table.nice_table.mb-5
-            thead
-                tr
-                    - var check = '<input type="checkbox" disabled>'
-                    each val, index in ['#', check, 'Product', 'Category', 'Price']
-                        th!= val
-            tbody
-                each val in [1, 2, 3, 4, 5]
-                    tr= null
-                        - var check = '<input type="checkbox">'
-                        - var list = ['4', check, 'TV', 'Electronics', '1200$']
-                        each val, index in list
-                            td!= val
+        section.row.mx-auto
+            table.table.nice_table.mb-5.col-md-12.col-12
+                thead
+                    tr
+                        - var check = '<input type="checkbox" disabled>'
+                        each val, index in ['#', check, 'Product', 'Category', 'Price']
+                            th!= val
+                tbody
+                    each val in [1, 2, 3, 4, 5]
+                        tr= null
+                            - var check = '<input type="checkbox">'
+                            - var list = ['4', check, 'TV', 'Electronics', '1200$']
+                            each val, index in list
+                                td!= val
         .h2.nice_title.w-100.mb-4 We Recommend
         section.row.align-items-center.justify-content-between
-            - var list = []
-            img.img.img-fluid.col-md-4
+            - for(var n = 1; n < 4; n++)
+                .col-md-4.mb-3
+                    img(src='../img/' + n + '.jpg').img.rounded.img-fluid
 
     include ../partials/footer.pug
     include ../partials/scripts.pug
