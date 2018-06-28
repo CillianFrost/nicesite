@@ -1,7 +1,7 @@
 include ../partials/head.pug
 body
     include ../partials/header.pug
-    main.container-fluid.ml-5.mr-5
+    main.container-fluid.nice_padding
         .h2.nice_title.w-100.mb-4 Charts
         section.row.align-items-center.justify-content-around.mb-4
             - var n = 20
@@ -10,16 +10,23 @@ body
                     .nice_charts 
                         span= n++
         .h2.nice_title.w-100.mb-4 Sales
-        table.table.table-striped
+        table.table.nice_table.mb-5
             thead
                 tr
-                    each val, index in ['#', 'check', 'Product', 'Category', 'Price']
-                        th= val
+                    - var check = '<input type="checkbox" disabled>'
+                    each val, index in ['#', check, 'Product', 'Category', 'Price']
+                        th!= val
             tbody
                 each val in [1, 2, 3, 4, 5]
-                    tr= val
-                        each val, index in ['#', 'check', 'Product', 'Category', 'Price']
-                            td= val
-                    
+                    tr= null
+                        - var check = '<input type="checkbox">'
+                        - var list = ['4', check, 'TV', 'Electronics', '1200$']
+                        each val, index in list
+                            td!= val
+        .h2.nice_title.w-100.mb-4 We Recommend
+        section.row.align-items-center.justify-content-between
+            - var list = []
+            img.img.img-fluid.col-md-4
+
     include ../partials/footer.pug
     include ../partials/scripts.pug
