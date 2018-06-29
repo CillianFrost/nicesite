@@ -1,13 +1,13 @@
 header.mb-5
-  nav.navbar.navbar-expand-sm.navbar-dark.bg-custom-light
+  nav.navbar.navbar-expand-sm.navbar-dark.bg-custom-light.nice_padding
     button.navbar-toggler(type="button" data-toggle="collapse" data-target="#header_nav" aria-controls="header_nav" aria-expanded="false" aria-label="Toggle navigation")
       span.navbar-toggler-icon
-    #header_nav.collapse.navbar-collapse.ml-5
-      a.navbar-brand(href="index.html")
+    #header_nav.collapse.navbar-collapse
+      a.navbar-brand(href="store.html")
         | Store
       ul.navbar-nav
         li.nav-item.active
-          a.nav-link(href="dashboard.html")
+          a.nav-link(href="index.html")
             | Dashboard
             span.sr-only (current)
         li.nav-item
@@ -16,8 +16,8 @@ header.mb-5
           a.nav-link(href="categories.html") Categories
         li.nav-item
           a.nav-link(href="users.html") Users
-      ul.navbar-nav.ml-auto.mr-5
-        li.nav-item.dropdown.mr-3
+      ul.navbar-nav.ml-auto
+        li.nav-item.dropdown.mr-5
           i.fa.fa-bell.dropdown-toggle(aria-hidden='true' data-toggle='dropdown')
           .dropdown-menu
             a.dropdown-item(href='#') Link 1

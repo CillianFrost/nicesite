@@ -2,16 +2,17 @@ include ../partials/head.pug
 body
     include ../partials/header.pug
     main.container-fluid.nice_padding
-        .h2.nice_title.w-100.mb-4 Charts
+        .h2.nice_title.w-100.mb-5 Charts
         section.row.align-items-center.justify-content-around.mb-4
             - var n = 20
             while n < 24
-                .col-md-2.col-6.mb-4.chart_wrapper
-                    .nice_charts.mx-auto
+                .col-md-2.col-6.mb-3.chart_wrapper
+                    .nice_charts.mx-auto.mb-3
                         span= n++
+                    .h3.text-center.font-weight-light Date
         .h2.nice_title.w-100.mb-4 Sales
         section.row.mx-auto
-            table.table.nice_table.mb-5.col-md-12.col-12
+            table.table.mb-5.col-md-12.col-12.nice_table.table_col_width_fix
                 thead
                     tr
                         - var check = '<input type="checkbox" disabled>'
