@@ -15,17 +15,19 @@ body
                 thead
                     tr
                         - var check = '<input type="checkbox" disabled>'
-                        each val, index in ['#', check, 'Product', 'Category', 'Price']
+                        each val, index in ['#', check, 'Product', 'Category', 'Price', '', '']
                             th!= val
                 tbody
                     each val in [1, 2, 3, 4, 5]
                         tr= null
                             - var check = '<input type="checkbox">'
-                            - var list = ['4', check, 'TV', 'Electronics', '1200$']
+                            - var edit = '<i class="fas fa-pencil-alt"></i>'
+                            - var trash = '<i class="fa fa-trash" aria-hidden="true"></i>'
+                            - var list = ['4', check, 'TV', 'Electronics', '1200$', edit, trash]
                             each val, index in list
                                 td!= val
         .h2.nice_title.w-100.mb-4 We Recommend
-        section.row.align-items-center.justify-content-between
+        section.row.align-items-center.justify-content-between.mb-5
             - for(var n = 1; n < 4; n++)
                 .col-md-4.mb-3
                     img(src='../img/' + n + '.jpg').img.rounded.img-fluid

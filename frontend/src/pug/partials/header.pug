@@ -17,11 +17,15 @@ header.mb-5
         li.nav-item
           a.nav-link(href="users.html") Users
       ul.navbar-nav.ml-auto.mr-5
-        li.nav-item.mr-3
-          i.fa.fa-bell(aria-hidden='true')
-          i.fa.fa-caret-down(aria-hidden='true')
-        li.nav-item
-          i.fa.fa-user(aria-hidden='true')
-          i.fa.fa-caret-down(aria-hidden='true')
-
-
+        li.nav-item.dropdown.mr-3
+          i.fa.fa-bell.dropdown-toggle(aria-hidden='true' data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='#') Link 1
+            a.dropdown-item(href='#') Link 2
+            a.dropdown-item(href='#') Link 3
+        li.nav-item.dropdown
+          i.fa.fa-user.dropdown-toggle(aria-hidden='true' data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='#') Link 1
+            a.dropdown-item(href='#') Link 2
+            a.dropdown-item(href='#') Link 3
