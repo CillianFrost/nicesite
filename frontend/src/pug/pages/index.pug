@@ -1,37 +1,39 @@
-include ../partials/head.pug
-body
-    include ../partials/header.pug
-    main.container-fluid.nice_padding
-        .h2.nice_title.w-100.mb-5 Charts
-        section.row.align-items-center.justify-content-around.mb-4
-            - var n = 20
-            while n < 24
-                .col-md-2.col-6.mb-3.chart_wrapper
-                    .nice_charts.mx-auto.mb-3
-                        span= n++
-                    .h3.text-center.font-weight-light Date
-        .h2.nice_title.w-100.mb-4 Sales
-        section.row.mx-auto
-            table.table.mb-5.col-md-12.col-12.nice_table.table_col_width_fix
-                thead
-                    tr
-                        - var check = '<input type="checkbox" disabled>'
-                        each val, index in ['#', check, 'Product', 'Category', 'Price', '', '']
-                            th!= val
-                tbody
-                    each val in [1, 2, 3, 4, 5]
-                        tr= null
-                            - var check = '<input type="checkbox">'
-                            - var edit = '<i class="fas fa-pencil-alt"></i>'
-                            - var trash = '<i class="fa fa-trash" aria-hidden="true"></i>'
-                            - var list = ['4', check, 'TV', 'Electronics', '1200$', edit, trash]
-                            each val, index in list
-                                td!= val
-        .h2.nice_title.w-100.mb-4 We Recommend
-        section.row.align-items-center.justify-content-between.mb-5
-            - for(var n = 1; n < 4; n++)
-                .col-md-4.mb-3
-                    img(src='../img/' + n + '.jpg').img.rounded.img-fluid
+doctype html
+html
+    include ../partials/head.pug
+    body
+        include ../partials/header.pug
+        main.container-fluid.nice_padding
+            .h2.nice_title.w-100.mb-5 Charts
+            section.row.align-items-center.justify-content-around.mb-4
+                - var n = 20
+                while n < 24
+                    .col-md-2.col-6.mb-3.chart_wrapper
+                        .nice_charts.mx-auto.mb-3
+                            span= n++
+                        .h3.text-center.font-weight-light Date
+            .h2.nice_title.w-100.mb-4 Sales
+            section.row.mx-auto
+                table.table.mb-5.col-md-12.col-12.nice_table.table_col_width_fix
+                    thead
+                        tr
+                            - var check = '<input type="checkbox" disabled>'
+                            each val, index in ['#', check, 'Product', 'Category', 'Price', '', '']
+                                th!= val
+                    tbody
+                        each val in [1, 2, 3, 4, 5]
+                            tr= null
+                                - var check = '<input type="checkbox">'
+                                - var edit = '<i class="fas fa-pencil-alt"></i>'
+                                - var trash = '<i class="fa fa-trash" aria-hidden="true"></i>'
+                                - var list = ['4', check, 'TV', 'Electronics', '1200$', edit, trash]
+                                each val, index in list
+                                    td!= val
+            .h2.nice_title.w-100.mb-4 We Recommend
+            section.row.align-items-center.justify-content-between.mb-5
+                - for(var n = 1; n < 4; n++)
+                    .col-md-4.mb-3
+                        img(src='../img/' + n + '.jpg').img.rounded.img-fluid
 
-    include ../partials/footer.pug
-    include ../partials/scripts.pug
+        include ../partials/footer.pug
+        include ../partials/scripts.pug
