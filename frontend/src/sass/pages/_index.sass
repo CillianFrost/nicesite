@@ -8,3 +8,21 @@
 .chart_wrapper
     .h3
         color: $text_color
+
+.we_recommend
+    > a
+        img
+            transition: transform .2s
+        &:hover
+            img
+                transform: scale(1.05)
+
+.sales_interface
+    table
+        label
+            margin-bottom: 0
+    input[type='checkbox']
+        &:checked
+            + .nice_checkbox
+                div
+                    color: $text_color

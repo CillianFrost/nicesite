@@ -2,11 +2,26 @@ header
     .fa-bell, .fa-user
         color: $text_color
         font-size: .8em
+        cursor: pointer
+        transition: transform .2s
+        &:hover
+            transform: scale(1.1)
     .navbar
         padding-top: 0 !important
         padding-bottom: 0 !important
         .nav-link
             padding-top: 1rem
             padding-bottom: 1rem
+            color: $text_color !important
+            opacity: 1 !important
+        .nav-item
+            transition: background-color .2s
+            &:first-child
+                .nav-link
+                    font-size: 1.2em
+            &:hover
+                background-color: #485563
+                &:first-child
+                    background: none
     .active
         background-color: #485563

@@ -54,3 +54,19 @@ $link_color: #df691a
     &:hover
         a
             filter: brightness(150%)
+
+.nice_checkbox
+    border: 2px $text_color solid
+    margin-bottom: none !important
+    cursor: pointer
+    position: relative
+    width: 1em
+    height: 1em
+    div
+        position: absolute
+        top: -.5em
+        left: 0
+        color: transparent
+        font-weight: bold
+    &:hover
+        box-shadow: inset 0 0 3px $text_color

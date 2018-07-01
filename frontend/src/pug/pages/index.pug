@@ -13,26 +13,26 @@ html
                             span= n++
                         .h3.text-center.font-weight-light Date
             .h2.nice_title.w-100.mb-4 Sales
-            section.row.mx-auto
+            form.row.mx-auto.sales_interface
                 table.table.mb-5.col-md-12.col-12.nice_table.table_col_width_fix
                     thead
                         tr
-                            - var check = '<input type="checkbox" disabled>'
+                            - var check = '<div class="nice_checkbox"></div>'
                             each val, index in ['#', check, 'Product', 'Category', 'Price', '', '']
                                 th!= val
                     tbody
                         each val in [1, 2, 3, 4, 5]
                             tr= null
-                                - var check = '<input type="checkbox">'
+                                - var check = '<input hidden id="product' + val + '" name="" type="checkbox"><label class="nice_checkbox" for="product' + val + '"><div>&#10003;</div></label>'
                                 - var edit = '<i class="fas fa-pencil-alt"></i>'
                                 - var trash = '<i class="fa fa-trash" aria-hidden="true"></i>'
                                 - var list = ['4', check, 'TV', 'Electronics', '1200$', edit, trash]
                                 each val, index in list
                                     td!= val
             .h2.nice_title.w-100.mb-4 We Recommend
-            section.row.align-items-center.justify-content-between.mb-5
+            section.row.align-items-center.justify-content-between.mb-5.we_recommend
                 - for(var n = 1; n < 4; n++)
-                    .col-md-4.mb-3
+                    a(href='#').col-md-4.mb-3
                         img(src='../img/' + n + '.jpg').img.rounded.img-fluid
 
         include ../partials/footer.pug
