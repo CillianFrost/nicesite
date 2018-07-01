@@ -13,7 +13,13 @@ class Pages extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('pages', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('slug')->unique();
+            $table->string('title');
+            $table->boolean('publish')->default(1)->comment('0=Unpublished ,1=Published');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class Pages extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('pages');
     }
 }
