@@ -52,86 +52,56 @@
     <section class="row mx-auto">
     <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
         <thead>
-        <tr>
-            <th>
-                #
-            </th>
-            <th>
-                <input type="checkbox" disabled>
-            </th>
-            <th>
-                Product
-            </th>
-            <th>
-                Category
-            </th>
-            <th>
-                Price
-            </th>
-            <th></th>
-            <th></th>
-        </tr>
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    <input type="checkbox" disabled>
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Category
+                </th>
+                <th>
+                    Price
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>
-                4
-            </td>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>
-                TV
-            </td>
-            <td>
-                Electronics
-            </td>
-            <td>
-                1200$
-            </td>
-            <td>
-                <i class="fas fa-pencil-alt"></i>
-            </td>
-            <td>
-                <i class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><input type="checkbox"></td>
-            <td>TV</td>
-            <td>Electronics</td>
-            <td>1200$</td>
-            <td><i class="fas fa-pencil-alt"></i></td>
-            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><input type="checkbox"></td>
-            <td>TV</td>
-            <td>Electronics</td>
-            <td>1200$</td>
-            <td><i class="fas fa-pencil-alt"></i></td>
-            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><input type="checkbox"></td>
-            <td>TV</td>
-            <td>Electronics</td>
-            <td>1200$</td>
-            <td><i class="fas fa-pencil-alt"></i></td>
-            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><input type="checkbox"></td>
-            <td>TV</td>
-            <td>Electronics</td>
-            <td>1200$</td>
-            <td><i class="fas fa-pencil-alt"></i></td>
-            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-        </tr>
+            @if(!$products)
+                <div class="h1">Make php artisan migrate --seed</div> 
+            @else
+                @foreach($products as $product)
+                    <tr>
+                        <td>
+                            {{ $product->id }}
+                        </td>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td>
+                            {{ $product->name }}
+                        </td>
+                        <td>
+                            {{ $product->category }}
+                        </td>
+                        <td>
+                            1200$
+                        </td>
+                        <td>
+                            <i class="fas fa-pencil-alt"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                @endforeach
+            @endif
         </tbody>
     </table>
     </section>
