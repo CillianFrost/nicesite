@@ -17,6 +17,7 @@ class products extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('category');
+            $table->double('price');
             $table->boolean('sales')->default(1)->comment('0=storage ,1=for sale');
             $table->timestamps();
         });

@@ -15,30 +15,35 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert([
             'name' => 'Bread',
             'category' => 'Food',
+            'price' => '1',
             'sales' => true,
         ]);
 
         DB::table('products')->insert([
             'name' => 'Milk',
             'category' => 'Food',
+            'price' => '2',
             'sales' => true,
         ]);
 
         DB::table('products')->insert([
             'name' => 'iPhone',
             'category' => 'Electronics',
+            'price' => '699',
             'sales' => true,
         ]);
 
         DB::table('products')->insert([
             'name' => 'TV',
             'category' => 'Electronics',
+            'price' => '1099',
             'sales' => true,
         ]);
 
         DB::table('products')->insert([
             'name' => 'F.Dostoevsky "Crime and Punishment"',
             'category' => 'Books',
+            'price' => '8',
             'sales' => true,
         ]);
 

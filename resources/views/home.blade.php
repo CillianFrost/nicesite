@@ -73,35 +73,31 @@
             </tr>
         </thead>
         <tbody>
-            @if(!$products)
-                <div class="h1">Make php artisan migrate --seed</div> 
-            @else
-                @foreach($products as $product)
-                    <tr>
-                        <td>
-                            {{ $product->id }}
-                        </td>
-                        <td>
-                            <input type="checkbox">
-                        </td>
-                        <td>
-                            {{ $product->name }}
-                        </td>
-                        <td>
-                            {{ $product->category }}
-                        </td>
-                        <td>
-                            1200$
-                        </td>
-                        <td>
-                            <i class="fas fa-pencil-alt"></i>
-                        </td>
-                        <td>
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </td>
-                    </tr>
-                @endforeach
-            @endif
+            @foreach($products as $product)
+                <tr>
+                    <td>
+                        {{ $product->id }}
+                    </td>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        {{ $product->name }}
+                    </td>
+                    <td>
+                        {{ $product->category }}
+                    </td>
+                    <td>
+                        ${{ $product->price }}
+                    </td>
+                    <td>
+                        <i class="fas fa-pencil-alt"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
     </section>

@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        
         $products = Products::where('sales', 1)->get();
 
         return view('home')
