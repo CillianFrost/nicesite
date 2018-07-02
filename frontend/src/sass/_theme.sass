@@ -34,6 +34,14 @@ $link_color: #df691a
                 background-color: $light_color
             td
                 border: 0
+                vertical-align: middle
+                label
+                    margin-bottom: 0
+                input[type='checkbox']
+                    &:checked
+                        + .nice_checkbox
+                            div
+                                color: $text_color
     thead
         tr
             th

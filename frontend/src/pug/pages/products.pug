@@ -5,6 +5,33 @@ html
         include ../partials/header.pug
         main.container-fluid.nice_padding
             .h2.nice_title.w-100.mb-5 Products
+            form.row.mx-auto.products_interface
+                table.table.mb-5.col-md-12.col-12.nice_table.table_col_width_fix
+                    thead
+                        tr
+                            - var check = '<div class="nice_checkbox"></div>'
+                            each val, index in ['#', check, 'Product', 'Category', 'Price', 'Status', 'Store']
+                                th!= val
+                    tbody
+                        each val in [1, 2, 3, 4, 5]
+                            tr= null
+                                - var check = '<input hidden id="product' + val + '" name="" type="checkbox"><label class="nice_checkbox" for="product' + val + '"><div>&#10003;</div></label>'
+                                - var store = '<button class="btn btn-success" type="submit">Put Up</button>'
+                                - var list = ['4', check, 'TV', 'Electronics', '1200$', 'in store', store]
+                                each val, index in list
+                                    td!= val
+            .h2.nice_title.w-100.mb-5 Create new product
+            form(action='' method='post')
+                .row.mb-3
+                    - var productList = ['Product', 'Category', 'Price']
+                    each val, index in productList
+                        .form-group.col-md-3
+                            label(for=val).text-warning.mb-3.font-weight-bold
+                                span= val
+                            input(type='text' name=val id=val).form-control
+                .row.mb-5
+                    button(type='submit').btn.btn-warning.col-md-1.ml-3
+                        span.h5.text-uppercase.font-weight-bold Create
 
         include ../partials/footer.pug
         include ../partials/scripts.pug

@@ -5,6 +5,20 @@ html
         include ../partials/header.pug
         main.container-fluid.nice_padding
             .h2.nice_title.w-100.mb-5 Store
-
+            form.row.mx-auto.store_interface
+                table.table.mb-5.col-md-12.col-12.nice_table.table_col_width_fix
+                    thead
+                        tr
+                            - var check = '<div class="nice_checkbox"></div>'
+                            each val, index in ['#', check, 'Product', 'Category', 'Price', 'Buy']
+                                th!= val
+                    tbody
+                        each val in [1, 2, 3, 4, 5]
+                            tr= null
+                                - var check = '<input hidden id="product' + val + '" name="" type="checkbox"><label class="nice_checkbox" for="product' + val + '"><div>&#10003;</div></label>'
+                                - var buy = '<button class="btn btn-success" type="submit">Buy</button>'
+                                - var list = ['4', check, 'TV', 'Electronics', '1200$', buy]
+                                each val, index in list
+                                    td!= val
         include ../partials/footer.pug
         include ../partials/scripts.pug
