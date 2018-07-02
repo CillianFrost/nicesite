@@ -49,71 +49,76 @@
     <div class="h2 nice_title w-100 mb-4">
         Sales
     </div>
-    <section class="row mx-auto">
-    <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
-        <thead>
-            <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    <input type="checkbox" disabled>
-                </th>
-                <th>
-                    Product
-                </th>
-                <th>
-                    Category
-                </th>
-                <th>
-                    Price
-                </th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($products as $product)
+    <form class="row mx-auto sales_interface">
+        <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
+            <thead>
                 <tr>
-                    <td>
-                        {{ $product->id }}
-                    </td>
-                    <td>
-                        <input type="checkbox">
-                    </td>
-                    <td>
-                        {{ $product->name }}
-                    </td>
-                    <td>
-                        {{ $product->category }}
-                    </td>
-                    <td>
-                        ${{ $product->price }}
-                    </td>
-                    <td>
-                        <i class="fas fa-pencil-alt"></i>
-                    </td>
-                    <td>
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                    </td>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        <div class="nice_checkbox"></div>
+                    </th>
+                    <th>
+                        Product
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th></th>
+                    <th></th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
-    </section>
+            </thead>
+            <tbody>
+                @foreach($products as $product)
+                    <tr>
+                        <td>
+                            {{ $product->id }}
+                        </td>
+                        <td>
+                            <input hidden id="product2" name="" type="checkbox">
+                            <label class="nice_checkbox" for="product2">
+                                <div>
+                                    &#10003;
+                                </div>
+                            </label>
+                        </td>
+                        <td>
+                            {{ $product->name }}
+                        </td>
+                        <td>
+                            {{ $product->category }}
+                        </td>
+                        <td>
+                            ${{ $product->price }}
+                        </td>
+                        <td>
+                            <i class="fas fa-pencil-alt"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </form>
     <div class="h2 nice_title w-100 mb-4">
         We Recommend
     </div>
-    <section class="row align-items-center justify-content-between mb-5">
-        <div class="col-md-4 mb-3">
+    <section class="row align-items-center justify-content-between mb-5 we_recommend">
+        <a href='#' class="col-md-4 mb-3 order-2 order-md-1">
             <img class="img rounded img-fluid" src="{{ asset('img/1.jpg') }}" data-rjs="2">
-        </div>
-        <div class="col-md-4 mb-3">
+        </a>
+        <a href='#' class="col-md-4 mb-3 order-3 order-md-2">
             <img class="img rounded img-fluid" src="{{ asset('img/2.jpg') }}" data-rjs="2">
-        </div>
-        <div class="col-md-4 mb-3">
+        </a>
+        <a href='#' class="col-md-4 mb-3 order-1 order-md-3">
             <img class="img rounded img-fluid" src="{{ asset('img/3.jpg') }}" data-rjs="2">
-        </div>
+        </a>
     </section>
 @endsection
 @section('scripts')
