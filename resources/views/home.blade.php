@@ -106,13 +106,16 @@
     </div>
     <section class="row align-items-center justify-content-between mb-5">
         <div class="col-md-4 mb-3">
-            <img class="img rounded img-fluid" src="{{ asset('img/1.jpg') }}">
+            <img class="img rounded img-fluid" src="{{ asset('img/1.jpg') }}" data-rjs="2">
         </div>
         <div class="col-md-4 mb-3">
-            <img class="img rounded img-fluid" src="{{ asset('img/2.jpg') }}">
+            <img class="img rounded img-fluid" src="{{ asset('img/2.jpg') }}" data-rjs="2">
         </div>
         <div class="col-md-4 mb-3">
-            <img class="img rounded img-fluid" src="{{ asset('img/3.jpg') }}">
+            <img class="img rounded img-fluid" src="{{ asset('img/3.jpg') }}" data-rjs="2">
         </div>
     </section>
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/retina.min.js') }}"></script>
 @endsection

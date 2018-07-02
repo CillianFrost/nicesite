@@ -33,7 +33,7 @@ html
             section.row.align-items-center.justify-content-between.mb-5.we_recommend
                 - for(var n = 1; n < 4; n++)
                     a(href='#').col-md-4.mb-3
-                        img(src='../img/' + n + '.jpg').img.rounded.img-fluid
+                        img(src='../img/' + n + '.jpg' data-rjs="2").img.rounded.img-fluid
 
         include ../partials/footer.pug
         include ../partials/scripts.pug
