@@ -42,28 +42,46 @@
                             {{ $product->status }}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-success">Put Up</a>
+                            <a href="{{ route('products.putup') }}" class="btn btn-success">Put Up</a>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </form>
+
     <div class="h2 nice_title w-100 mb-5">Create new product</div>
-    <form action="" method="post">
+
+    <form action="{{ route('products.store') }}" method="post">
+        @csrf
         <div class="row mb-3">
             <div class="form-group col-md-3">
-            <label class="text-warning mb-3 font-weight-bold" for="Product"><span>Product</span></label>
-            <input class="form-control" type="text" name="Product" id="Product">
+                <label class="text-warning mb-3 font-weight-bold" for="name">
+                    <span>
+                        Product
+                    </span>
+                </label>
+                <input class="form-control" type="text" name="name" id="name">
             </div>
+
             <div class="form-group col-md-3">
-            <label class="text-warning mb-3 font-weight-bold" for="Category"><span>Category</span></label>
-            <input class="form-control" type="text" name="Category" id="Category">
+                <label class="text-warning mb-3 font-weight-bold" for="category">
+                    <span>
+                        Category
+                    </span>
+                </label>
+                <input class="form-control" type="text" name="category" id="category">
             </div>
+
             <div class="form-group col-md-3">
-            <label class="text-warning mb-3 font-weight-bold" for="Price"><span>Price</span></label>
-            <input class="form-control" type="text" name="Price" id="Price">
+                <label class="text-warning mb-3 font-weight-bold" for="price">
+                    <span>
+                        Price
+                    </span>
+                </label>
+                <input class="form-control" type="text" name="price" id="price">
             </div>
+
             <div class="form-group col-md-3">
                 <label class="text-warning mb-3 font-weight-bold" for="slug">
                     <span>
@@ -73,6 +91,7 @@
                 <input class="form-control" type="text" name="slug" id="slug">
             </div>
         </div>
+
         <div class="row mb-5">
             <button class="btn btn-warning col-md-1 ml-3" type="submit">
                 <span class="h5 text-uppercase font-weight-bold">
