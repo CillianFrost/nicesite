@@ -18,7 +18,9 @@ class products extends Migration
             $table->string('name');
             $table->string('category');
             $table->double('price');
-            $table->boolean('sales')->default(1)->comment('0=storage ,1=for sale');
+            $table->string('slug')->unique();
+            $table->enum('status', ['storage', 'sold out', 'store'])->default('storage');
+            $table->boolean('publish')->default(1)->comment('0=inactive ,1=active');
             $table->timestamps();
         });
     }

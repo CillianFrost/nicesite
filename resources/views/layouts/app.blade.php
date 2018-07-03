@@ -17,34 +17,20 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header_nav" aria-controls="header_nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="header_nav">
-                    <a class="navbar-brand" href="store.html">
-                        Store
-                    </a>
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">
-                            Dashboard
-                            <span class="sr-only">
-                                (current)
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">
-                            Products
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="categories.html">
-                            Categories
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="users.html">
-                            Users
-                        </a>
-                    </li>
+                    @foreach($pages as $page)
+                        <li class="nav-item 
+                            @if(Route::currentRouteName() == $page->slug) 
+                                active 
+                            @endif 
+                            @if($page->slug == 'store') 
+                                mr-2 
+                            @endif">
+                            <a class="nav-link" href="{{ route($page->slug) }}">
+                                {{ $page->title }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown mr-5">

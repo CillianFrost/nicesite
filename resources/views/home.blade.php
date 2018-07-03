@@ -79,8 +79,8 @@
                             {{ $product->id }}
                         </td>
                         <td>
-                            <input hidden id="product2" name="" type="checkbox">
-                            <label class="nice_checkbox" for="product2">
+                            <input hidden id="product-{{ $product->slug }}" name="" type="checkbox">
+                            <label class="nice_checkbox" for="product-{{ $product->slug }}">
                                 <div>
                                     &#10003;
                                 </div>
