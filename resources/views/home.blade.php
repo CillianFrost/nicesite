@@ -49,63 +49,71 @@
     <div class="h2 nice_title w-100 mb-4">
         Sales
     </div>
-    <form class="row mx-auto sales_interface">
-        <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
-            <thead>
-                <tr>
-                    <th>
-                        #
-                    </th>
-                    <th>
-                        <div class="nice_checkbox"></div>
-                    </th>
-                    <th>
-                        Product
-                    </th>
-                    <th>
-                        Category
-                    </th>
-                    <th>
-                        Price
-                    </th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($products as $product)
+    @if($products)
+        <form class="row mx-auto sales_interface">
+            <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
+                <thead>
                     <tr>
-                        <td>
-                            {{ $product->id }}
-                        </td>
-                        <td>
-                            <input hidden id="product-{{ $product->slug }}" name="" type="checkbox">
-                            <label class="nice_checkbox" for="product-{{ $product->slug }}">
-                                <div>
-                                    &#10003;
-                                </div>
-                            </label>
-                        </td>
-                        <td>
-                            {{ $product->name }}
-                        </td>
-                        <td>
-                            {{ $product->category }}
-                        </td>
-                        <td>
-                            ${{ $product->price }}
-                        </td>
-                        <td>
-                            <i class="fas fa-pencil-alt"></i>
-                        </td>
-                        <td>
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </td>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            <div class="nice_checkbox"></div>
+                        </th>
+                        <th>
+                            Product
+                        </th>
+                        <th>
+                            Category
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th></th>
+                        <th></th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </form>
+                </thead>
+                <tbody>
+                    @foreach($products as $product)
+                        @if($product->status == 'store')
+                            <tr>
+                                <td>
+                                    {{ $product->id }}
+                                </td>
+                                <td>
+                                    <input hidden id="product-{{ $product->slug }}" name="" type="checkbox">
+                                    <label class="nice_checkbox" for="product-{{ $product->slug }}">
+                                        <div>
+                                            &#10003;
+                                        </div>
+                                    </label>
+                                </td>
+                                <td>
+                                    {{ $product->name }}
+                                </td>
+                                <td>
+                                    {{ $product->category }}
+                                </td>
+                                <td>
+                                    ${{ $product->price }}
+                                </td>
+                                <td>
+                                    <i class="fas fa-pencil-alt"></i>
+                                </td>
+                                <td>
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                        @endif
+                    @endforeach
+                </tbody>
+            </table>
+        </form>
+    @else
+        <div class="h1 text-warning text-center">
+            Nothing in the store right now. Put up something from <a href="{{ route('products') }}"</a>
+        </div>
+    @endif
     <div class="h2 nice_title w-100 mb-4">
         We Recommend
     </div>

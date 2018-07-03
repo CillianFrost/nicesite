@@ -20,8 +20,9 @@ class products extends Migration
             $table->double('price');
             $table->string('slug')->unique();
             $table->enum('status', ['storage', 'sold out', 'store'])->default('storage');
-            $table->boolean('publish')->default(1)->comment('0=inactive ,1=active');
-            $table->timestamps();
+            $table->boolean('publish')->default(1)->comment('0=inactive, 1=active');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

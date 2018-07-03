@@ -18,7 +18,8 @@ class Pages extends Migration
             $table->string('slug')->unique();
             $table->string('title');
             $table->boolean('publish')->default(1)->comment('0=Unpublished ,1=Published');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

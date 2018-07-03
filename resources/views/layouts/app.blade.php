@@ -20,8 +20,8 @@
                 <ul class="navbar-nav">
                     @foreach($pages as $page)
                         <li class="nav-item 
-                            @if(Route::currentRouteName() == $page->slug) 
-                                active 
+                            @if(Route::currentRouteName() == $page->slug && Route::currentRouteName() !== 'store') 
+                                active
                             @endif 
                             @if($page->slug == 'store') 
                                 mr-2 
