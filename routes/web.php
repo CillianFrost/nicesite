@@ -23,4 +23,4 @@ Route::get('/users', 'UsersController@index')->name('users');
 // Products routes
 
 Route::post('/products', 'ProductsController@store')->name('products.store');
-Route::post('/products', 'ProductsController@putup')->name('products.putup');
+// Route::post('/products', 'ProductsController@putup')->name('products.putup');

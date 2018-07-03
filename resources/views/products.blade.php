@@ -42,7 +42,7 @@
                             {{ $product->status }}
                         </td>
                         <td>
-                            <a href="{{ route('products.putup') }}" class="btn btn-success">Put Up</a>
+                            <a href="#" class="btn btn-success">Put Up</a>
                         </td>
                     </tr>
                 @endforeach
