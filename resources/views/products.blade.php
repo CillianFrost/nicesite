@@ -6,12 +6,12 @@
         <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
             <thead>
             <tr>
-                <th>#</th>
+                <th>@sortablelink('id', '#')</th>
                 <th><div class="nice_checkbox"></div></th>
-                <th>Product</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Status</th>
+                <th>@sortablelink('name', 'Product')</th>
+                <th>@sortablelink('category', 'Category')</th>
+                <th>@sortablelink('price', 'Price')</th>
+                <th>@sortablelink('status', 'Status')</th>
                 <th>Store</th>
             </tr>
             </thead>
@@ -100,8 +100,12 @@
             </button>
         </div>
     </form>
+    <example-component></example-component>
+
 @endsection
 
 @section('scripts')
-    
+    <script src="{{ asset('public/js/manifest.js') }}"></script>
+    <script src="{{ asset('pucblic/js/vendor.js') }}"></script>
+    <script src="{{ asset('public/js/app.js') }}"></script>
 @endsection

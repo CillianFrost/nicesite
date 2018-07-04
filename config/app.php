@@ -164,6 +164,7 @@ return [
          * Custom Service Providers...
          */
         App\Providers\NiceServiceProvider::class,
+        Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
 
     ],
 

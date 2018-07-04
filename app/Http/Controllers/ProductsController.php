@@ -7,9 +7,13 @@ use App\Products;
 
 class ProductsController extends Controller
 {
-    public function index()
+    public function index(Products $product)
     {
-        return view('Products');
+        $products = $product->sortable()->paginate();
+
+        return view('Products')
+            ->with('products', $products)
+        ;
     }
 
     public function store(Request $request)
