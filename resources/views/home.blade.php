@@ -2,40 +2,48 @@
 
 @section('content')
     <div class="h2 nice_title w-100 mb-5">
-        Charts
+        Charts {{ $charts_day_current }}
     </div>
     <section class="row align-items-center justify-content-around mb-4 charts_interface">
         <div class="col-md-2 col-6 text-center">
             <svg width="150" height="150" viewbox="0 0 100 100">
                 <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
-                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
-                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">20</text>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="{{ $charts_day_current }}"></circle>
+                <text class="h4" text-anchor="middle" x='50' y='58' fill="#ebebeb" transform="rotate(90 50 50)">
+                    {{ $soldout }}
+                </text>
             </svg>
-            <div class="h2">Date</div>
+            <div class="h2">Day</div>
         </div>
         <div class="col-md-2 col-6 text-center">
             <svg width="150" height="150" viewbox="0 0 100 100">
                 <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
-                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
-                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">21</text>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="{{ $charts_week_current }}"></circle>
+                <text class="h4" text-anchor="middle" x='50' y='58' fill="#ebebeb" transform="rotate(90 50 50)">
+                    {{ $soldout }}
+                </text>
             </svg>
-            <div class="h2">Date</div>
+            <div class="h2">Week</div>
         </div>
         <div class="col-md-2 col-6 text-center">
             <svg width="150" height="150" viewbox="0 0 100 100">
                 <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
-                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
-                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">22</text>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="{{ $charts_month_current }}"></circle>
+                <text class="h4" text-anchor="middle" x='50' y='58' fill="#ebebeb" transform="rotate(90 50 50)">
+                    {{ $soldout }}
+                </text>
             </svg>
-            <div class="h2">Date</div>
+            <div class="h2">Month</div>
         </div>
         <div class="col-md-2 col-6 text-center">
             <svg width="150" height="150" viewbox="0 0 100 100">
                 <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
-                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
-                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">23</text>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="{{ $charts_year_current }}"></circle>
+                <text class="h4" text-anchor="middle" x='50' y='58' fill="#ebebeb" transform="rotate(90 50 50)">
+                    {{ $soldout }}
+                </text>
             </svg>
-            <div class="h2">Date</div>
+            <div class="h2">Year</div>
         </div>
     </section>
     <div class="h2 nice_title w-100 mb-4">
