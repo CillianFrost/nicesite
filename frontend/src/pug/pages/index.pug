@@ -8,10 +8,11 @@ html
             section.row.align-items-center.justify-content-around.mb-4
                 - var n = 20
                 while n < 24
-                    .col-md-2.col-6.mb-3.chart_wrapper
-                        .nice_charts.mx-auto.mb-3
-                            span= n++
-                        .h3.text-center.font-weight-light Date
+                    .col-md-2.col-6.text-center
+                        svg(width='150' height='150' viewbox='0 0 100 100')
+                            circle(cx='50' cy='50' r='40' stroke='#ebebeb' stroke-width='5' fill='none')
+                            circle(cx='50' cy='50' r='40' stroke='#df691a' stroke-width='5' fill='none' stroke-dasharray='100')
+                            text(x='42' y='55' fill='#ebebeb')= n++
             .h2.nice_title.w-100.mb-4 Sales
             form.row.mx-auto.sales_interface
                 table.table.mb-5.col-md-12.col-12.nice_table.table_col_width_fix
