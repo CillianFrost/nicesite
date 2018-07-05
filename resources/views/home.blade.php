@@ -4,46 +4,38 @@
     <div class="h2 nice_title w-100 mb-5">
         Charts
     </div>
-    <section class="row align-items-center justify-content-around mb-4">
-        <div class="col-md-2 col-6 mb-3 chart_wrapper">
-            <div class="nice_charts mx-auto mb-3">
-                <span>
-                    20
-                </span>
-            </div>
-            <div class="h3 text-center font-weight-light">
-                Date
-            </div>
+    <section class="row align-items-center justify-content-around mb-4 charts_interface">
+        <div class="col-md-2 col-6 text-center">
+            <svg width="150" height="150" viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
+                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">20</text>
+            </svg>
+            <div class="h2">Date</div>
         </div>
-        <div class="col-md-2 col-6 mb-3 chart_wrapper">
-            <div class="nice_charts mx-auto mb-3">
-                <span>
-                    21
-                </span>
-            </div>
-            <div class="h3 text-center font-weight-light">
-                Date
-            </div>
+        <div class="col-md-2 col-6 text-center">
+            <svg width="150" height="150" viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
+                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">21</text>
+            </svg>
+            <div class="h2">Date</div>
         </div>
-        <div class="col-md-2 col-6 mb-3 chart_wrapper">
-            <div class="nice_charts mx-auto mb-3">
-                <span>
-                    22
-                </span>
-            </div>
-            <div class="h3 text-center font-weight-light">
-                Date
-            </div>
+        <div class="col-md-2 col-6 text-center">
+            <svg width="150" height="150" viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
+                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">22</text>
+            </svg>
+            <div class="h2">Date</div>
         </div>
-        <div class="col-md-2 col-6 mb-3 chart_wrapper">
-            <div class="nice_charts mx-auto mb-3">
-                <span>
-                    23
-                </span>
-            </div>
-            <div class="h3 text-center font-weight-light">
-                Date
-            </div>
+        <div class="col-md-2 col-6 text-center">
+            <svg width="150" height="150" viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="251.327" stroke-dashoffset="70"></circle>
+                <text x="42" y="55" fill="#ebebeb" transform="rotate(90 50 50)">23</text>
+            </svg>
+            <div class="h2">Date</div>
         </div>
     </section>
     <div class="h2 nice_title w-100 mb-4">

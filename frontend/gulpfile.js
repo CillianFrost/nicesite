@@ -36,6 +36,7 @@ gulp.task('sass', () => {
     .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/css/'))
+    .pipe(gulp.dest('../public/css/'))
     .pipe(browsersync.reload({stream : true}));
 });
 
