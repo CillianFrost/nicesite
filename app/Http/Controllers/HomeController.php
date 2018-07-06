@@ -40,6 +40,7 @@ class HomeController extends Controller
             ->with('charts_week_current', $charts_week_current)
             ->with('charts_day_current', $charts_day_current)
             ->with('charts_day_goal', $charts_day_goal)
+            ->with('charts_size', $charts_size)
         ;
     }
 }
