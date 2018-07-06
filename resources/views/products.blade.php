@@ -42,7 +42,13 @@
                             {{ $product->status }}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-success">Put Up</a>
+                            @if($product->status == 'store')
+                                <a href="#" class="btn col-md-8 btn-info">Get back</a>
+                            @elseif($product->status == 'sold out')
+                                <a href="#" class="btn col-md-8 btn-warning">Sell again</a>
+                            @else
+                                <a href="#" class="btn col-md-8 btn-success">Put Up</a>
+                            @endif
                         </td>
                     </tr>
                 @endforeach
