@@ -3,7 +3,7 @@
 @section('content')
     <div class="h2 nice_title w-100 mb-5">Products</div>
     <form class="row mx-auto products_interface">
-        <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
+        <table class="table mb-5 col-md-12 col-12 nice_table">
             <thead>
             <tr>
                 <th>@sortablelink('id', '#')</th>
@@ -43,11 +43,11 @@
                         </td>
                         <td>
                             @if($product->status == 'store')
-                                <a href="#" class="btn col-md-8 btn-info">Get back</a>
+                                <a href="#" class="btn col-md-12 btn-info">Get back</a>
                             @elseif($product->status == 'sold out')
-                                <a href="#" class="btn col-md-8 btn-warning">Sell again</a>
+                                <a href="#" class="btn col-md-12 btn-warning">Sell again</a>
                             @else
-                                <a href="#" class="btn col-md-8 btn-success">Put Up</a>
+                                <a href="#" class="btn col-md-12 btn-success">Put Up</a>
                             @endif
                         </td>
                     </tr>

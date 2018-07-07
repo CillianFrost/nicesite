@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="h2 nice_title w-100 mb-5">
-        Charts {{ $charts_day_goal }} |||| {{ $charts_day_current }} ||||
+        Charts
     </div>
     <section class="row align-items-center justify-content-around mb-4 charts_interface">
         <div class="col-md-2 col-6 text-center">
