@@ -11,6 +11,8 @@ class HomeController extends Controller
     {
         $soldout = Products::where('status', 'sold out')->count();
 
+        $home_products = Products::where('status', 'store')->sortable()->paginate();
+
         $charts_size = 251.327;
 
         $charts_year = 365;
@@ -35,6 +37,7 @@ class HomeController extends Controller
 
         return view('home')
             ->with('soldout', $soldout)
+            ->with('home_products', $home_products)
             ->with('charts_year_current', $charts_year_current)
             ->with('charts_month_current', $charts_month_current)
             ->with('charts_week_current', $charts_week_current)

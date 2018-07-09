@@ -20,13 +20,13 @@ class NiceServiceProvider extends ServiceProvider
             $pages = Pages::where('publish', 1)->get();
         }
 
-        $products = [];
+        /* $products = [];
         if (\Schema::hasTable('products')) {
             $products = Products::where('publish', 1)->get();
-        }
+        } */
 
         view()->share('pages', $pages);
-        view()->share('products', $products);
+        /* view()->share('products', $products); */
     }
 
     /**

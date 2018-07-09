@@ -35,11 +35,11 @@ class ProductsController extends Controller
         return redirect()->route('products');
     }
 
-    public function putup(Products $product)
+    /* public function putup(Products $product)
     {
         $product->status = 'store';
         $product->save();
 
         return redirect()->route('products');
-    }
+    } */
 }

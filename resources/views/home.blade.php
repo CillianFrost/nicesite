@@ -8,7 +8,7 @@
         <div class="col-md-2 col-6 text-center">
             <svg width="150" height="150" viewbox="0 0 100 100">
                 <circle cx="50" cy="50" r="40" stroke="#ebebeb" stroke-width="5" fill="none"></circle>
-                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="{{ $charts_size }}" stroke-dashoffset="@if($charts_day_current >= $charts_size) 0 @else {{ $charts_size - $charts_day_current }}@endif"></circle>
+                <circle cx="50" cy="50" r="40" stroke="#df691a" stroke-width="5" fill="none" stroke-dasharray="{{ $charts_size }}" stroke-dashoffset="@if($charts_day_current >= $charts_size) 0 @else {{ $charts_size - $charts_day_current }} @endif"></circle>
                 <text class="h4" text-anchor="middle" x='50' y='58' fill="#ebebeb" transform="rotate(90 50 50)">
                     {{ $soldout }}
                 </text>
@@ -49,62 +49,50 @@
     <div class="h2 nice_title w-100 mb-4">
         Sales
     </div>
-    @if($products)
+    @if($home_products->count())
         <form class="row mx-auto sales_interface">
             <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
                 <thead>
                     <tr>
-                        <th>
-                            #
-                        </th>
-                        <th>
-                            <div class="nice_checkbox"></div>
-                        </th>
-                        <th>
-                            Product
-                        </th>
-                        <th>
-                            Category
-                        </th>
-                        <th>
-                            Price
-                        </th>
+                        <th>@sortablelink('id', '#')</th>
+                        <th><div class="nice_checkbox"></div></th>
+                        <th>@sortablelink('name', 'Product')</th>
+                        <th>@sortablelink('category', 'Category')</th>
+                        <th>@sortablelink('price', 'Price')</th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($products as $product)
-                        @if($product->status == 'store')
-                            <tr>
-                                <td>
-                                    {{ $product->id }}
-                                </td>
-                                <td>
-                                    <input hidden id="product-{{ $product->slug }}" name="" type="checkbox">
-                                    <label class="nice_checkbox" for="product-{{ $product->slug }}">
-                                        <div>
-                                            &#10003;
-                                        </div>
-                                    </label>
-                                </td>
-                                <td>
-                                    {{ $product->name }}
-                                </td>
-                                <td>
-                                    {{ $product->category }}
-                                </td>
-                                <td>
-                                    ${{ $product->price }}
-                                </td>
-                                <td>
-                                    <i class="fas fa-pencil-alt"></i>
-                                </td>
-                                <td>
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-                        @endif
+                    @foreach($home_products as $item)
+                        <tr>
+                            <td>
+                                {{ $item->id }}
+                            </td>
+                            <td>
+                                <input hidden id="product-{{ $item->slug }}" name="" type="checkbox">
+                                <label class="nice_checkbox" for="product-{{ $item->slug }}">
+                                    <div>
+                                        &#10003;
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                {{ $item->name }}
+                            </td>
+                            <td>
+                                {{ $item->category }}
+                            </td>
+                            <td>
+                                ${{ $item->price }}
+                            </td>
+                            <td>
+                                <i class="fas fa-pencil-alt"></i>
+                            </td>
+                            <td>
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
