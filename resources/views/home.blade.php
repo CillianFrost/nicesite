@@ -99,7 +99,7 @@
         </form>
     @else
         <div class="h1 text-warning text-center">
-            Nothing in the store right now. Put up something from <a href="{{ route('products') }}"</a>
+            Nothing in the store right now. Make php artisan migrate --seed to see test data.
         </div>
     @endif
     <div class="h2 nice_title w-100 mb-4">

@@ -19,11 +19,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="header_nav">
                     <ul class="navbar-nav align-items-center">
-                        @foreach($pages as $page)
-                            <li class="nav-item @if(Route::currentRouteName() == $page->slug && Route::currentRouteName() !== 'store') active @elseif(Route::currentRouteName() == $page->slug && Route::currentRouteName() == 'store')) font-weight-bold @endif @if($page->slug == 'store') mr-2 @endif">
-                                <a class="nav-link" href="{{ route($page->slug) }}">{{ $page->title }}</a>
-                            </li>
-                        @endforeach
+                        @if($pages->count())
+                            @foreach($pages as $page)
+                                <li class="nav-item @if(Route::currentRouteName() == $page->slug && Route::currentRouteName() !== 'store') active @elseif(Route::currentRouteName() == $page->slug && Route::currentRouteName() == 'store')) font-weight-bold @endif @if($page->slug == 'store') mr-2 @endif">
+                                    <a class="nav-link" href="{{ route($page->slug) }}">{{ $page->title }}</a>
+                                </li>
+                            @endforeach
+                        @else
+                            <div class="h1 text-warning text-center">
+                                No pages right now. Make php artisan migrate --seed to see test data.
+                            </div>
+                        @endif
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown mr-5">

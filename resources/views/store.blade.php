@@ -50,6 +50,10 @@
                 </tbody>
             </table>
         </form>
+    @else
+        <div class="h1 text-warning text-center">
+            Nothing in the store right now. Make php artisan migrate --seed to see test data.
+        </div>
     @endif
 @endsection
 @section('scripts')
