@@ -2,7 +2,7 @@
 
 *This site has making for my portfolio. Graffic design of the dashboard page was taken from <a href="interesnee.ru">Очень Интересно</a> IT-company's test task for new frontend-developers.*
 
-The project works on **Laravel**. Has limited functionality and working without middleware. This is a frontend portfolio so all backend data has made just for example and can pretty rubish.
+The project works on **Laravel**. Has limited functionality and working without middleware. This is a frontend portfolio so all backend data has made just for example and can be pretty rubish.
 
 ### *If you want to see isolated Frontend sources with gulp, pug and sass you can find it in "Frontend" folder.* 
 > Remember that static and dynamic versions can be different.
