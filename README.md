@@ -21,3 +21,5 @@ Since you have a server and composer just following these steps:
 - Edit and delete buttons
 - Middleware
 - Something with ajax and/or Vue.js
+- Categories and Users pages
+- Relationship between migrations
