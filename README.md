@@ -1,8 +1,8 @@
-# NiceSite
+# Nice Site
 
-*This site is making for my portfolio. Graffic design of the dashboard page was taken from <a href="interesnee.ru">Очень Интересно</a> IT-company's test task for new frontend-developers.*
+*This site has making for my portfolio. Graffic design of the dashboard page was taken from <a href="interesnee.ru">Очень Интересно</a> IT-company's test task for new frontend-developers.*
 
-The project works on **Laravel**. Has the limited functionality and working without middleware.
+The project works on **Laravel**. Has limited functionality and working without middleware. This is a frontend portfolio so all backend data has made just for example and can pretty rubish.
 
 ### *If you want to see isolated Frontend sources with gulp, pug and sass you can find it in "Frontend" folder.* 
 > Remember that static and dynamic versions can be different.
@@ -15,9 +15,9 @@ Since you have a server and composer just following these steps:
 3. Run **php artisan migrate --seed** in cmd to create databases with ready test data.
 4. Run **php artisan serve** and go to your localhost to see the site.
 
-## What's not working for now
-- Charts
-- Sorting tables
-- Put up products in store
+## What's not working for now and placed in my to do list:
+- Put up products in store (only in storage)
 - Buying
+- Edit and delete buttons
 - Middleware
+- Something with ajax and/or Vue.js
