@@ -24,3 +24,4 @@ Route::get('/users', 'UsersController@index')->name('users');
 
 Route::post('/products', 'ProductsController@store')->name('products.store');
 // Route::post('/products', 'ProductsController@putup')->name('products.putup');
+//Route::post('/', 'HomeController@storage')->name('home.storage');

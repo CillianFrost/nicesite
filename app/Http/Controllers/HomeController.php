@@ -45,4 +45,12 @@ class HomeController extends Controller
             ->with('charts_size', $charts_size)
         ;
     }
+
+    /* public function storage(Request $request, Products $product)
+    {
+        $product->status = 'storage';
+        $product->save();
+
+        return redirect()->route('home');
+    } */
 }

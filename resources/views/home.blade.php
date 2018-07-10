@@ -51,6 +51,7 @@
     </div>
     @if($home_products->count())
         <form class="row mx-auto sales_interface">
+            @csrf
             <table class="table mb-5 col-md-12 col-12 nice_table table_col_width_fix">
                 <thead>
                     <tr>
@@ -66,9 +67,7 @@
                 <tbody>
                     @foreach($home_products as $item)
                         <tr>
-                            <td>
-                                {{ $item->id }}
-                            </td>
+                            <td>{{ $item->id }}</td>
                             <td>
                                 <input hidden id="product-{{ $item->slug }}" name="" type="checkbox">
                                 <label class="nice_checkbox" for="product-{{ $item->slug }}">
@@ -77,18 +76,10 @@
                                     </div>
                                 </label>
                             </td>
-                            <td>
-                                {{ $item->name }}
-                            </td>
-                            <td>
-                                {{ $item->category }}
-                            </td>
-                            <td>
-                                ${{ $item->price }}
-                            </td>
-                            <td>
-                                <i class="fas fa-pencil-alt"></i>
-                            </td>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->category }}</td>
+                            <td>${{ $item->price }}</td>
+                            <td><i class="fas fa-pencil-alt"></i></td>
                             <td>
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </td>
