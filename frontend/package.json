@@ -1,13 +1,13 @@
 {
-  "name": "hyip_template",
+  "name": "nicesite",
   "version": "1.1.0",
   "main": "index.js",
-  "description": "For very fast making of HYIP",
+  "description": "for portfolio",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Sergey, Igor Sh., Igor Sm.",
+  "author": "Sergey",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.6",
